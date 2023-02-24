@@ -11,15 +11,15 @@
 
 <body>
     <div class="button_container">
-        <button onclick="switchToWalk()">1</button>
+        <button onclick="showLoadingScreen('')">1</button>
         <button onclick="switchToWalkWithDotSpinner()">2</button>
-        <button onclick="switchToSpinn()">3</button>
-        <button onclick="switchToWalkHighResAnimation()">4</button>
-        <button onclick="switchToWalkHighResAnimationRotesLicht()">5</button>
+        <button onclick="showLoadingScreen(3)">3</button>
+        <button onclick="showLoadingScreen(4)">4</button>
+        <button onclick="showLoadingScreen(5)">5</button>
         <button onclick="showLoadingScreen(6)">6</button>
-        <button onclick="switchToWalkHighResAnimationRotesLicht()">7</button>
-        <button onclick="switchToWalkHighResAnimationRotesLicht()">8</button>
-        <button onclick="switchToWalkHighResAnimationRotesLicht()">9</button>
+        <button onclick="showLoadingScreen(7)">7</button>
+        <button onclick="showLoadingScreen(8)">8</button>
+        <button onclick="showLoadingScreen(9)">9</button>
     </div>
     <div>
         Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der
@@ -178,29 +178,9 @@
 
     <script>
         //public
-        function switchToSpinn() {
-            getDotSpinner().style.display = "none";
-            getImage().src = "./vamos3.gif"
-        }
-
-        function switchToWalk() {
-            getDotSpinner().style.display = "none";
-            getImage().src = "./vamos.gif"
-        }
-
         function switchToWalkWithDotSpinner() {
             getDotSpinner().style.display = "block";
             getImage().src = "./vamos.gif"
-        }
-
-        function switchToWalkHighResAnimation() {
-            getDotSpinner().style.display = "none";
-            getImage().src = "./vamos4.gif"
-        }
-
-        function switchToWalkHighResAnimationRotesLicht() {
-            getDotSpinner().style.display = "none";
-            getImage().src = "./vamos5.gif"
         }
         
         function showLoadingScreen(nr) {
