@@ -181,12 +181,19 @@
     <script>
         //public
         function switchToWalkWithDotSpinner() {
+            getPulseSpinner().style.display = "none";
             getDotSpinner().style.display = "block";
             getImage().src = "./vamos.gif"
         }
         
+        function switchToPulseSpinner() {
+            getPulseSpinner().style.display = "block";
+            getDotSpinner().style.display = "none";
+            getImage().src = "./ampelmann_gruen_64.gif"
+        }
+        
         function showLoadingScreen(nr) {
-            console.log("HELLO");
+            getPulseSpinner().style.display = "none";
             getDotSpinner().style.display = "none";
             getImage().src = `./vamos${nr}.gif`
         }
@@ -198,6 +205,10 @@
 
         function getDotSpinner() {
             return document.getElementsByClassName("dot-spin")[0];
+        }
+        
+        function getPulseSpinner() {
+            return document.getElementsByClassName("v-loading-indicator")[0];
         }
     </script>
 </body>
