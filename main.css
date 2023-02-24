@@ -71,3 +71,94 @@
         box-shadow: 0 -18px 0 0 #108418, 12.727926px -12.727926px 0 0 #108418, 18px 0 0 -5px rgba(152, 128, 255, 0), 12.727926px 12.727926px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.727926px 12.727926px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.727926px -12.727926px 0 0 #108418;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.v-loading-indicator {
+  position: fixed; /* Occupy whole screen even if scrolled */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ 
+  /* Eat mouse events when visible, doesn't prevent scrolling */
+  pointer-events: auto;
+ 
+  animation: fadein 0.3s ease-out 0.2s normal 1 both;
+  
+  background: url("../frontend/images/hdi_logo_rgb.svg");
+  background-repeat: no-repeat;
+  background-size: 75px;
+  background-position: center;
+
+  z-index: 2147483646;
+  display: none 
+  /* Weil am Anfang die erste Animation gezeigt wird */
+}
+
+@keyframes fadein {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, .7);
+  }
+}
+
+
+.v-loading-indicator::before, .v-loading-indicator::after {
+	content: "";
+	
+	width: 125px;
+  	height: 125px;
+
+	position: absolute;
+  	top: calc(50% - 24px);
+	left: calc(50% - 24px);
+	
+	margin-top: -50px;   
+	margin-bottom: auto;
+	margin-left: -50px;
+	margin-right: auto;
+	
+	padding: 10px;
+
+	border: 2px solid rgb(0, 103, 41);
+	border-radius: 50%;
+	
+	animation: pulse 1.5s linear infinite;
+}
+
+.v-loading-indicator::after {
+	animation-delay: .4s;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(.5);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(.9);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+
+
+
+
+
+
