@@ -16,6 +16,10 @@
         <button onclick="switchToSpinn()">3</button>
         <button onclick="switchToWalkHighResAnimation()">4</button>
         <button onclick="switchToWalkHighResAnimationRotesLicht()">5</button>
+        <button onclick="showLoadingScreen(6)">6</button>
+        <button onclick="switchToWalkHighResAnimationRotesLicht()">7</button>
+        <button onclick="switchToWalkHighResAnimationRotesLicht()">8</button>
+        <button onclick="switchToWalkHighResAnimationRotesLicht()">9</button>
     </div>
     <div>
         Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der
@@ -197,6 +201,11 @@
         function switchToWalkHighResAnimationRotesLicht() {
             getDotSpinner().style.display = "none";
             getImage().src = "./vamos5.gif"
+        }
+        
+        function showLoadingScreen(nr) {
+            getDotSpinner().style.display = "none";
+            getImage().src = './vamos${nr}.gif'
         }
 
         //private
